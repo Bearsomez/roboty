@@ -1,1 +1,42 @@
--pusto-
+extern void object::Wspolpraca()
+{
+	object item;
+	object item2;
+	object item3;
+	turn(90);
+	move(5);
+	turn(-90);
+	move(160);
+	turn(-90);
+	
+	item = radar(TitaniumOre);
+	goto(item.position);
+	grab();
+	turn(-90);
+	item2 = radar(Converter);
+	goto(item2.position);
+	drop();
+	move(-5);
+	wait(15);
+	move(5);
+	grab();
+	move(-5);
+	item3 = radar(VioletFlag);
+	turn(direction(item3.position));
+	move(distance(position,item3.position)+5);
+	drop();
+	turn(180);
+	item=radar(TitaniumOre);
+	goto(item.position);
+	grab();
+	turn(-90);
+	goto(item2.position);
+	drop();
+	move(-5);
+	wait(15);
+	move(5);
+	grab();
+	move(-5);
+	turn(direction(item3.position));
+	move(distance(position,item3.position)+4);
+}
