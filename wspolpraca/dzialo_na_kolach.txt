@@ -10,4 +10,6 @@ extern void object::Wspolpraca()
 		turn(direction(item.position));
 		fire(1);
 	}
+	turn(45);
+	move(25);
 }
