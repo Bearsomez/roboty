@@ -1,1 +1,45 @@
--puste-
+extern void object::Labirynt()
+{
+	move(5);
+	object przod, lewo, prawo;
+	object finish;
+	finish = radar(GoalArea);
+	while(position != finish.position)
+	{
+		przod = radar(Barrier, 0,45,0,5);
+		lewo = radar(Barrier, 90,45,0,5);
+		prawo = radar(Barrier, -90,45,0,5);
+		
+		if(lewo == null)
+		{
+			turn(90);
+			move(5);
+			continue;
+		}
+		if(przod == null)
+		{
+			move(5);
+			continue;
+		}
+		if(prawo == null)
+		{
+			turn(-90);
+			move(5);
+			continue;
+		}
+		if(lewo != null)
+		{
+			if(prawo != null)
+			{
+				if(przod != null)
+				{
+					turn(-180);
+					move(5);
+					continue;
+				}
+			}
+		}
+		break;
+	}
+}
+
