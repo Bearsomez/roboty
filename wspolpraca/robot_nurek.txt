@@ -37,7 +37,19 @@ extern void object::Wspolpraca()
 	drop();
 	move(-1);
 	
+	turn(-90);
+	move(5);
+	turn(90);
+	move(50);
 	
-	
+	item = radar(PowerCell);
+	goto(item.position);
+	grab();
+	turn(-90);
+	item2 = radar(WingedGrabber, FilterOnlyLanding );
+	goto(item2.position);
+	move(-1);
+	drop();
+	move(-1);
 	
 }
