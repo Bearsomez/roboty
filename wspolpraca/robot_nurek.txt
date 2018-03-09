@@ -2,41 +2,42 @@ extern void object::Wspolpraca()
 {
 	object item;
 	object item2;
-	object item3;
 	turn(90);
 	move(5);
 	turn(-90);
-	move(160);
+	move(100);
 	turn(-90);
 	
-	item = radar(TitaniumOre);
+	item = radar(PowerCell);
 	goto(item.position);
 	grab();
 	turn(-90);
-	item2 = radar(Converter);
+	item2 = radar(WheeledGrabber);
 	goto(item2.position);
+	move(-1);
 	drop();
-	move(-5);
-	wait(15);
+	move(-1);
+	
+	turn(90);
 	move(5);
-	grab();
-	move(-5);
-	item3 = radar(VioletFlag);
-	turn(direction(item3.position));
-	move(distance(position,item3.position)+5);
-	drop();
-	turn(180);
-	item=radar(TitaniumOre);
+	turn(-90);
+	move(23);
+	turn(90);
+	move(30);
+	turn(-45);
+	move(20);
+	
+	item = radar(PowerCell);
 	goto(item.position);
 	grab();
 	turn(-90);
+	item2 = radar(WingedGrabber);
 	goto(item2.position);
+	move(-1);
 	drop();
-	move(-5);
-	wait(15);
-	move(5);
-	grab();
-	move(-5);
-	turn(direction(item3.position));
-	move(distance(position,item3.position)+4);
+	move(-1);
+	
+	
+	
+	
 }
