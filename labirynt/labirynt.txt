@@ -4,8 +4,9 @@ extern void object::Labirynt()
 	object przod, lewo, prawo;
 	object finish;
 	finish = radar(GoalArea);
-	while(position != finish.position)
+	while(distance2d(position,finish.position)>5)
 	{
+		motor(1,1);
 		przod = radar(Barrier, 0,45,0,5);
 		lewo = radar(Barrier, 90,45,0,5);
 		prawo = radar(Barrier, -90,45,0,5);
@@ -42,4 +43,3 @@ extern void object::Labirynt()
 		break;
 	}
 }
-
