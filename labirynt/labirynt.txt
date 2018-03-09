@@ -1,12 +1,10 @@
 extern void object::Labirynt()
 {
 	move(5);
-	object przod, lewo, prawo;
-	object finish;
+	object przod, lewo, prawo, finish;
 	finish = radar(GoalArea);
 	while(distance2d(position,finish.position)>5)
 	{
-		motor(1,1);
 		przod = radar(Barrier, 0,45,0,5);
 		lewo = radar(Barrier, 90,45,0,5);
 		prawo = radar(Barrier, -90,45,0,5);
