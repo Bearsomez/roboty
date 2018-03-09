@@ -1,1 +1,10 @@
--pusto-
+extern void object::Wspolpraca()
+{
+	
+	move(-1);
+	grab(EnergyCell);
+	drop();
+	grab(Behind);
+	drop(EnergyCell);
+	
+}
