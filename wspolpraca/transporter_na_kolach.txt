@@ -3,7 +3,7 @@ extern void object::Wspolpraca()
 	object item;
 	object item2;
 	
-	wait(84);
+	wait(85);
 	move(-1);
 	grab(EnergyCell);
 	drop();
@@ -28,7 +28,7 @@ extern void object::Wspolpraca()
 	move(3);
 	grab();
 	move(-10);
-	turn(90);
+	turn(95);
 	move(6);
 	drop();
 	move(-5);

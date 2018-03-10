@@ -74,6 +74,7 @@ extern void object::Wspolpraca()
 	item3 = radar(TitaniumOre);
 	goto(item3.position);
 	grab();
+	wait(14);
 	item4 = radar(Converter);
 	goto(item4.position);
 	drop();

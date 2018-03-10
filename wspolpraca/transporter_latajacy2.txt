@@ -1,15 +1,14 @@
-
 extern void object::Wspolpraca()
 {
 	
-	wait(155);
+	wait(156);
 	move(-1);
 	grab(EnergyCell);
 	drop();
 	grab(Behind);
 	drop(EnergyCell);
 	
-	
+	object ogniwo;
 	object huta;
 	object tytan;
 	object flagafiol;
@@ -23,8 +22,21 @@ extern void object::Wspolpraca()
 	goto (flagafiol.position);
 	move(5);
 	drop();
-	wait(40);
+	wait(7);
 	jet(1);
+	ogniwo = radar(NuclearCell);
+	jet(1);
+	goto(ogniwo.position);
+	grab();
+	wait(7);
+	flagafiol = radar(VioletFlag);
+	jet(1);
+	goto(flagafiol.position);
+	turn(40);
+	move(5);
+	drop();
+	wait(26);
+	turn(10);
 	huta = radar(Converter);
 	goto (huta.position);
 	tytan = radar(Titanium);
