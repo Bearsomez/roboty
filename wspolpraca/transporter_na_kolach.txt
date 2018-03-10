@@ -1,11 +1,36 @@
 extern void object::Wspolpraca()
 {
+	object item;
+	object item2;
+	
 	wait(84);
 	move(-1);
 	grab(EnergyCell);
 	drop();
 	grab(Behind);
 	drop(EnergyCell);
+	
+	turn(90);
+	move(5);
+	turn(-90);
+	move(20);
+	turn(90);
+	move(100);
+	
+	item = radar(TitaniumOre);
+	goto(item.position);
+	grab();
+	item2 = radar(Converter);
+	goto(item2.position);
+	drop();
+	move(-5);
+	wait(15);
+	move(6);
+	grab();
+	move(-10);
+	turn(90);
+	move(4);
+	drop();
 	
 	
 }
