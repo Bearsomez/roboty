@@ -2,6 +2,8 @@ extern void object::Wspolpraca()
 {
 	object item;
 	object item2;
+	object item3;
+	object item4;
 	turn(90);
 	move(5);
 	turn(-90);
@@ -51,5 +53,38 @@ extern void object::Wspolpraca()
 	move(-1);
 	drop();
 	move(-1);
+	
+	item3 = radar(TitaniumOre);
+	goto(item3.position);
+	grab();
+	move(-5);
+	wait(35);
+	item4 = radar(Converter);
+	goto(item4.position);
+	drop();
+	move(-5);
+	wait(15);
+	move(5);
+	grab();
+	move(-10);
+	turn(90);
+	move(5);
+	drop();
+	
+	item3 = radar(TitaniumOre);
+	goto(item3.position);
+	grab();
+	item4 = radar(Converter);
+	goto(item4.position);
+	drop();
+	move(-5);
+	wait(15);
+	move(5);
+	grab();
+	move(-1);
+	turn(90);
+	move(4);
+	drop();
+	
 	
 }
