@@ -1,0 +1,74 @@
+extern void object::Wspolpraca()
+{
+	object item;
+	object item2;
+	
+	wait(85);
+	move(-1);
+	grab(EnergyCell);
+	drop();
+	grab(Behind);
+	drop(EnergyCell);
+	
+	turn(90);
+	move(5);
+	turn(-90);
+	move(20);
+	turn(90);
+	move(100);
+	
+	item = radar(TitaniumOre);
+	goto(item.position);
+	grab();
+	item2 = radar(Converter);
+	goto(item2.position);
+	drop();
+	move(-5);
+	wait(15);
+	move(3);
+	grab();
+	move(-10);
+	turn(95);
+	move(6);
+	drop();
+	move(-5);
+	
+	item = radar(TitaniumOre);
+	goto(item.position);
+	grab();
+	move(-6);
+	item2 = radar(Converter);
+	goto(item2.position);
+	drop();
+	move(-5);
+	wait(15);
+	move(5);
+	grab();
+	move(-15);
+	turn(80);
+	move(5);
+	drop();
+	
+	turn(70);
+	move(10);
+	turn(90);
+	move(10);
+	
+	item = radar(TitaniumOre);
+	goto(item.position);
+	grab();
+	item2 = radar(Converter);
+	goto(item2.position);
+	drop();
+	move(-5);
+	wait(15);
+	move(5);
+	grab();
+	move(-1);
+	turn(90);
+	move(10);
+	drop();
+	
+	turn(180);
+	move(25);
+}
