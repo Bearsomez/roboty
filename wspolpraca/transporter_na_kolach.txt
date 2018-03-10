@@ -45,11 +45,11 @@ extern void object::Wspolpraca()
 	move(5);
 	grab();
 	move(-15);
-	turn(90);
+	turn(80);
 	move(5);
 	drop();
 	
-	turn(90);
+	turn(70);
 	move(10);
 	turn(90);
 	move(10);
@@ -70,7 +70,5 @@ extern void object::Wspolpraca()
 	drop();
 	
 	turn(180);
-	move(15);
-	turn(-90);
-	move(15);
+	move(25);
 }

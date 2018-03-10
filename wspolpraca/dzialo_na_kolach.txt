@@ -1,6 +1,5 @@
 extern void object::Wspolpraca()
 {
-	
 	object    item;
 	
 	for ( int i=0 ; i<3 ; i=i+1 )
@@ -10,7 +9,6 @@ extern void object::Wspolpraca()
 		turn(direction(item.position));
 		fire(1);
 	}
-	move(60);
-	turn(90);
-	move(5);
+	turn(45);
+	move(25);
 }
