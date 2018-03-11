@@ -69,8 +69,7 @@ extern void object::Wspolpraca()
 	flagafiol = radar(VioletFlag);
 	jet(1);
 	goto (flagafiol.position);
-	turn(100);
-	move(2);
+	turn(-80);
 	drop();
 	
 }
