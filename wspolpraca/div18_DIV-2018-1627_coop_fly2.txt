@@ -7,9 +7,9 @@ extern void object::Wspolpraca()
 	drop();
 	grab(Behind);
 	drop(EnergyCell);
-	
+	object flagazielona;
 	object ogniwo;
-	object huta;
+	object flagaczerwona;
 	object tytan;
 	object flagafiol;
 	tytan = radar(Titanium);
@@ -35,10 +35,12 @@ extern void object::Wspolpraca()
 	turn(40);
 	move(5);
 	drop();
-	wait(26);
+	wait(12);
 	turn(10);
-	huta = radar(Converter);
-	goto (huta.position);
+	flagazielona = radar(GreenFlag);
+	jet(1);
+	goto(flagazielona.position);
+	wait(4);
 	tytan = radar(Titanium);
 	jet(1);
 	goto (tytan.position);
@@ -50,5 +52,26 @@ extern void object::Wspolpraca()
 	turn(90);
 	move(5);
 	drop();
-	
+	flagazielona = radar(GreenFlag);
+	jet(1);
+	goto(flagazielona.position);
+	wait(4);
+	flagaczerwona = radar(RedFlag);
+	jet(1);
+	goto(flagaczerwona.position);
+	wait(3);
+	ogniwo = radar(NuclearCell);
+	goto(ogniwo.position);
+	grab();
+	wait(5);
+	flagazielona = radar(GreenFlag);
+	jet(1);
+	goto(flagazielona.position);
+	wait(4);
+	flagafiol = radar(VioletFlag);
+	jet(1);
+	goto(flagafiol.position);
+	turn(20);
+	move(3);
+	drop();
 }
